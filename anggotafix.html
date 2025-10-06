@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anggota</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url(/sumbing6.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;  
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: black;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 5px 5px 5px gray;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a.logo{
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+        }
+       
+        .title-page{
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            margin-top: 40px;
+            margin-left: 400px;
+            margin-right: 400px;
+            border-radius: 10px;
+            background-color: #796c99;
+            box-shadow: 5px 5px 5px #777;
+            padding: 20px;  
+            text-align: center;
+            border-bottom: 0px
+        }
+        .title-page h2{
+          font-size: 30px;
+          color: white
+        }
+        .title-page p{
+          font-size: 15px;
+          color: rgb(182, 182, 255);
+          margin-top: 10px;
+        }
+        .profile-container {
+        display: flex;
+        margin-bottom: 60px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 0 40px;
+      }
+      .profile-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        width: 300px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .profile-card:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+         transition: transform 0.3s, box-shadow 0.3s
+      }
+      
+      .profile-card img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+      .profile-card:hover img {
+        transform: scale(1.05);
+    }
+      .profile-card h3 {
+        margin: 0 0 5px 0;
+        color: rgb(172, 41, 41);
+      }
+      .profile-card p {
+        margin: 0;
+        color: #777;
+        font-size: 0.9em;
+      }
+      footer{
+        text-align: center;
+        padding: 5px;
+        background-color: #333;
+        color: white;
+        position: relative;
+        bottom: 0;
+        margin-top: 20px;
+        
+      }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="logo">Sumbimbing</a>
+        <a href="/home.html">Home</a> |
+        <a href="/anggotafix.html">About Us</a>   
+    </nav>
+    
+    <div id="profil">
+        <div class="title-page">
+            <h2>Sumbimbing Profile</h2>
+            <p>Anggota Kelompok Gunung Sumbing</p>
+        </div>
+        <div class="profile-container">
+          <a class="profile-card" href="profil-daffa.html">
+            <img src="/Daffa.jpg" alt="Foto Profil Daffa" />
+            <h3>Daffa Al Hafizh Mahasin</h3>
+            <p>Ketua</p>
+          </a>
+        
+          <a class="profile-card" href="profil-alif.html">
+            <img src="/Alif.jpg" alt="Foto Profil Alif" />
+            <h3>Alif Zulfikar Setiawan</h3>
+            <p>Anggota</p>
+          </a>
+        
+          <a class="profile-card" href="profil-aurora.html">
+            <img src="/Rora.jpg" alt="Foto Profil Aurora" />
+            <h3>Aurora Cinta Julient</h3>
+            <p>Anggota</p>
+          </a>
+        
+          <a class="profile-card" href="profil-carissa.html">
+            <img src="/Carissa (1).jpg" alt="Foto Profil Carissa" />
+            <h3>Carissa Jemima Ananta</h3>
+            <p>Anggota</p>
+          </a>
+        
+          <a class="profile-card" href="profil-fadhil.html">
+            <img src="/Fadhil.jpg" alt="Foto Profil Fadhil" />
+            <h3>Muhammad Fadhil Saputro</h3>
+            <p>Anggota</p>
+          </a>
+        
+          <a class="profile-card" href="profil-akif.html">
+            <img src="/Akif.jpg" alt="Foto Profil Akif" />
+            <h3>Najmi Akif Muhammad</h3>
+            <p>Anggota</p>
+          </a>
+        </div>
+    </div>
+      
+    <footer>
+        <p>&copy;2025 Sumbimbing | Kelompok Gunung Sumbing</p>
+    </footer>
+</body>
+</html>

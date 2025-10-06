@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Flora & Fauna Gunung Sumbing</title>
+    <style>
+       
+        :root {
+            --primary: #4ce9ca;      
+            --secondary: #003366;   
+            --accent: #2d6a4f;
+            --bg: #f7fbfd;
+            --card-bg: #fff;
+            --shadow: 0 4px 24px #0001;
+            --radius: 18px;
+        }
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: #222;
+            background-color: hsl(209, 100%, 84%);
+            min-height: 100vh;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 5px gray;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover{
+            transform:translateY(-3px); background: rgba(255,255,255,0.04); }
+        nav a.active{
+            background: rgba(255,255,255,0.06); box-shadow: inset 0 -2px 0 rgba(255,255,255,0.03); 
+        }
+        nav a.logo{
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .welcome-section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 600px;
+            padding: 15px;
+            background-image: url(/sumbing\ home1\ \(4\).jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            gap: 30px;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        .welcome-text {
+    text-align: center;
+}
+        .welcome-text h2{
+            font-size: 60px;
+            margin-top: 50px;
+            color: white;
+            margin-bottom: 10px; 
+            text-align: center;
+            font-weight: bold;
+        }
+        .welcome-button{
+            display: inline-block;
+            background-color: #014907;
+            color: white;
+            margin: 20px 10px;
+            padding: 12px 25px;
+            text-align: center; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 25px;
+            box-shadow: 3px 3px 3px rgb(167, 167, 167);
+            transition: transform 0.3s, box-shadow 0.3s;
+            
+        }
+        .welcome-button:hover{
+            background-color: #555;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s, box-shadow 0.3s     
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        main{
+            transform: translateY(30px);
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+        h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-top: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        section {
+            max-width: 900px;
+            margin: 38px auto 0 auto;
+            padding: 10px 18px 10px;
+            background-color: #8abdf0;
+            
+        }
+        .data-block {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 32px;
+            padding: 24px 22px 18px 22px;
+            border: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 30px;
+            transition: box-shadow 0.2s;
+            transition: transform 0.3s;
+        }
+        .data-block:hover {
+            transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+         transition: transform 0.3s, box-shadow 0.3s
+        }
+        .img-paragraf {
+            width: 180px;
+            max-width: 40vw;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #00336622;
+            margin: 0;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+            background: #eaf6fb;
+            flex-shrink: 0;
+        }
+        .img-paragraf:hover{
+            transform: scale(1.05);
+        }
+        .data-block b {
+            font-size: 1.15rem;
+            color: var(--secondary);
+            display: inline-block;
+            margin-bottom: 2px;
+            font-weight: 700;
+        }
+        .latin {
+            font-style: italic;
+            color: var(--accent);
+            font-size: 1rem;
+            margin-left: 2px;
+        }
+        .data-block p {
+            margin: 8px 0 0 0;
+            line-height: 1.7;
+            font-size: 1.04rem;
+            color: #333;
+        }
+        .data-block > *:not(:first-child) {
+            flex: 1 1 320px;
+            min-width: 0;
+        }
+        footer{
+        text-align: center;
+        padding: 5px;
+        background-color: #333;
+        color: white;
+        position: relative;
+        bottom: 0;
+        margin-top: 20px; 
+      }
+        @media (max-width: 700px) {
+            section {
+            padding: 0 6vw;
+            }
+            .data-block {
+            flex-direction: column;
+            align-items: center;
+            padding: 18px 8vw 14px 8vw;
+            }
+            .img-paragraf {
+            width: 100%;
+            max-width: 320px;
+            margin-bottom: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+            font-size: 1.3rem;
+            }
+            h2 {
+            font-size: 1.1rem;
+            }
+            .data-block {
+            padding: 12px 2vw 10px 2vw;
+            }
+            .img-paragraf {
+            max-width: 98vw;
+            }
+        }
+    </style>
+</head>
+<body> 
+    <header>
+        <nav>
+        <a class="logo">Sumbimbing</a>
+        <a href="/home.html">Home</a> |
+        <a href="/anggotafix.html">About Us</a> |
+        <a href="#flora">Flora</a> |
+        <a href="#fauna">Fauna</a>
+    </nav>
+    </header>
+    
+    <div class="welcome-section">
+            <div class="welcome-text">
+                <h2>Keanekaragaman Hayati<br>Gunung Sumbing</h2>
+                <a href="#flora" class="welcome-button">Kunjungi Flora</a>
+                <a href="#fauna" class="welcome-button">Kunjungi Fauna</a>
+            </div>
+        </div>
+
+    <section id="flora">
+        <div class="florafauna1">
+        <h2>Flora Gunung Sumbing</h2>
+        <div class="data-block">
+            <img class="img-paragraf" src="/rasamala.jpeg" alt="Pohon Rasamala">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Rasamala" target="_blank" rel="noopener" class="no-underline">Rasamala</a></b> (<span class="latin">Altingia excelsa</span>)
+                <p>
+                    Rasamala adalah pohon besar yang tumbuh terutama di hutan pegunungan bawah Gunung Sumbing. Pohon ini dapat mencapai tinggi hingga 40 meter dan memiliki batang lurus serta kulit kayu beraroma khas. Rasamala sangat penting untuk menjaga kelembapan tanah dan mencegah erosi. Daun-daunnya yang rimbun juga menjadi tempat hidup berbagai satwa, serta membantu menyerap air hujan sehingga mencegah longsor di lereng gunung.
+                </p>
+            </div>
+        </div>
+        <div class="data-block">
+            <img class="img-paragraf" src="/puspa.jpeg" alt="Puspa">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Puspa_(kayu)" target="_blank" rel="noopener" class="no-underline">Puspa</a></b> (<span class="latin">Schima wallichii</span>)
+                <p>
+                    Puspa merupakan pohon berbunga putih kekuningan yang umum ditemukan di hutan basah pegunungan Jawa, termasuk di Gunung Sumbing. Pohon ini terkenal sebagai penahan erosi alami karena akarnya yang kuat. Puspa juga sering dimanfaatkan masyarakat sekitar sebagai peneduh jalan dan kayunya dapat digunakan dalam industri ringan. Selain itu, bunga puspa menjadi sumber makanan bagi banyak serangga dan burung.
+                </p>
+            </div>
+        </div>
+        <div class="data-block">
+            <img class="img-paragraf" src="/cemara gunung.jpeg" alt="Cemara Gunung">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Cemara_gunung" target="_blank" rel="noopener" class="no-underline">Cemara Gunung</a></b> (<span class="latin">Casuarina junghuhniana</span>)
+                <p>
+                    Cemara Gunung adalah pohon yang sangat khas di zona montana Sumbing. Ciri utamanya adalah daun menyerupai jarum dan batang yang kokoh serta tinggi. Pohon ini tahan terhadap api maupun angin, sehingga sering menjadi pelindung alami ekosistem pegunungan. Cemara Gunung juga memberikan tempat berlindung bagi burung serta hewan kecil lainnya.
+                </p>
+            </div>
+        </div>
+        <div class="data-block">
+            <img class="img-paragraf" src="/edelwise jawa.jpeg" alt="Edelweis Jawa">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Edelweis_jawa" target="_blank" rel="noopener" class="no-underline">Edelweis Jawa</a></b> (<span class="latin">Anaphalis javanica</span>)
+                <p>
+                    Edelweis Jawa dikenal sebagai bunga abadi dan menjadi simbol kelestarian alam pegunungan di Indonesia. Tanaman ini tumbuh di zona subalpin Gunung Sumbing, di ketinggian lebih dari 2.400 mdpl. Bunganya berwarna putih kekuningan dan mampu bertahan lama tanpa layu, sehingga sangat diminati pendaki, meski kini sudah dilindungi. Edelweis juga penting bagi serangga penyerbuk.
+                </p>
+            </div>
+        </div>
+        <div class="data-block">
+            <img class="img-paragraf" src="pakis pohon.jpeg" alt="Pakis Pohon">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Cyatheaceae" target="_blank" rel="noopener" class="no-underline">Pakis Pohon</a></b> (<span class="latin">Cyathea contaminans</span>)
+                <p>
+                    Pakis Pohon adalah salah satu tumbuhan pakis terbesar yang tumbuh di lereng-lereng Gunung Sumbing. Tingginya bisa mencapai 15 meter dengan batang besar dan daun menyirip lebar. Pakis ini berfungsi menahan air di tanah, menjaga kelembapan, dan memberikan naungan bagi tumbuhan kecil di bawahnya. Keberadaan pakis pohon menjadi indikator ekosistem hutan yang sehat.
+                </p>
+            </div>
+        </div>
+        </div>
+    </section>
+   
+    <section id="fauna">
+        <div class="florafauna2">
+        <h2>Fauna Gunung Sumbing</h2>
+        <div class="data-block">
+            <img class="img-paragraf" src="/macan tutul jawa.jpeg" alt="Macan Tutul Jawa">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Macan_tutul_jawa" target="_blank" rel="noopener" class="no-underline">Macan Tutul Jawa</a></b> (<span class="latin">Panthera pardus melas</span>)
+                <p>
+                    Macan Tutul Jawa adalah predator puncak hutan pegunungan Sumbing yang sangat langka dan dilindungi. Hewan ini berperan penting dalam menjaga keseimbangan populasi mangsa di alam liar. Biasanya berburu rusa, kijang, atau mamalia kecil lain dan lebih aktif pada malam hari. Keberadaannya menjadi penanda ekosistem hutan yang masih alami.
+                </p>
+            </div>
+        </div>
+        <div class="data-block">
+            <img class="img-paragraf" src="/lutung jawa.jpeg" alt="Lutung Jawa">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Lutung_jawa" target="_blank" rel="noopener" class="no-underline">Lutung Jawa</a></b> (<span class="latin">Trachypithecus auratus</span>)
+                <p>
+                    Lutung Jawa merupakan primata endemik yang hidup berkelompok di hutan pegunungan. Hewan ini memiliki bulu hitam keemasan dan aktif mencari makan di pohon, dengan makanan utama berupa daun muda, buah, dan pucuk tanaman. Lutung Jawa berperan penting dalam penyebaran biji-bijian dan membantu pelestarian hutan.
+                </p>
+            </div>
+        </div>
+        <div class="data-block">
+            <img class="img-paragraf" src="/elang jawa.jpeg" alt="Elang Jawa">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Elang_jawa" target="_blank" rel="noopener" class="no-underline">Elang Jawa</a></b> (<span class="latin">Nisaetus bartelsi</span>)
+                <p>
+                    Elang Jawa adalah burung pemangsa langka dan endemik Jawa, menjadi maskot nasional Indonesia. Burung ini memiliki ciri jambul pada kepala dan bercak hitam di dada. Elang Jawa biasanya berburu mamalia kecil dan burung lain dari atas pepohonan tinggi. Habitatnya sangat dipengaruhi oleh kelestarian hutan pegunungan.
+                </p>
+            </div>
+        </div>
+        <div class="data-block">
+            <img class="img-paragraf" src="/bajing terbang jawa.jpeg" alt="Bajing Terbang Jawa">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Bajing_terbang_jawa" target="_blank" rel="noopener" class="no-underline">Bajing Terbang Jawa</a></b> (<span class="latin">Petinomys setosus</span>)
+                <p>
+                    Bajing Terbang Jawa adalah mamalia kecil nokturnal yang mampu meluncur dari pohon ke pohon menggunakan selaput kulit di antara kakinya. Hewan ini aktif mencari makanan seperti buah, biji, dan serangga di malam hari. Bajing terbang berperan dalam penyebaran biji tanaman di hutan.
+                </p>
+            </div>
+        </div>
+        <div class="data-block">
+            <img class="img-paragraf" src="/katak pohon jawa.jpeg" alt="Katak Pohon Jawa">
+            <div>
+                <b><a href="https://id.wikipedia.org/wiki/Rhacophorus_margaritifer" target="_blank" rel="noopener" class="no-underline">Katak Pohon Jawa</a></b> (<span class="latin">Rhacophorus javanus</span>)
+                <p>
+                    Katak Pohon Jawa adalah amfibi endemik yang hidup di pepohonan hutan pegunungan. Katak ini memiliki selaput pada jari-jarinya yang memungkinkan mereka melompat jauh dari satu cabang ke cabang lain. Katak ini aktif saat malam dan membantu mengendalikan populasi serangga di hutan Sumbing.
+                </p>
+            </div>
+        </div>
+        </div>
+    </section>
+   
+    <footer>
+        <p>&copy;2025 Sumbimbing | Kelompok Gunung Sumbing</p>
+    </footer>
+    <style>
+        a.no-underline {
+            text-decoration: none;
+            color: inherit;
+        }
+        a.no-underline:hover, a.no-underline:focus {
+            text-decoration: underline;
+            color: var(--primary);
+        }
+    </style>
+</body>
+</html>
